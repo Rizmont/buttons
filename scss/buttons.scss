@@ -1,0 +1,54 @@
+$btn-default:       $default-color;
+$btn-primary:       $primary-color;
+$btn-success:       $success-color;
+$btn-info:          $info-color;
+$btn-warning:       $warning-color;
+$btn-danger:        $danger-color;
+$btn-fontColor:     $font-color;
+
+
+@mixin btn-variant($bg, $color, $border: none){
+    background: $bg;
+    color: $color;
+    border: $border;
+     &:hover,
+     &:active{
+        background: lighten($bg, 10%);
+     }
+}
+
+@mixin btn-size($min-width, $border-rad, $padding){
+    min-width: $min-width;
+    border-radius: $border-rad;
+    padding: $padding;
+}
+
+.btn{
+    @include btn-size(100px, 6px, 5px 20px);
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: $font-size;
+    text-align: center;
+        &--default{
+            @include btn-variant($btn-default, $default-font);
+            &:hover,
+            &.active {
+                background: darken($btn-default, 20%);
+            }
+        }
+        &--primary {
+            @include btn-variant ($btn-primary, $btn-fontColor);
+        }
+         &--success {
+            @include btn-variant ($btn-success, $btn-fontColor);
+        }
+        &--info {
+            @include btn-variant ($btn-info, $btn-fontColor);
+        }
+        &--warning {
+            @include btn-variant ($btn-warning, $btn-fontColor);
+        }
+        &--danger {
+            @include btn-variant ($btn-danger, $btn-fontColor);
+        }
+}

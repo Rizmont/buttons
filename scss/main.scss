@@ -1,0 +1,20 @@
+@import 'normalize';
+@import 'variables.scss';
+@import 'buttons.scss';
+@import 'forms.scss';
+@import 'type.scss';
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: #eee;
+}
+
+.container{
+    width: auto;
+    max-width: 980px;
+    margin: 0 auto;
+    position: relative;
+}

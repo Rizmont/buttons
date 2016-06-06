@@ -1,0 +1,48 @@
+$form-success:  $success-color;
+$form-danger:   $danger-color;
+$form-warning:  $warning-color;
+$form-normal:   $normal-color;
+$input-color:   #434a54;
+
+
+@mixin form-size ($width, $bradius, $border, $padding) {
+    width: $width;
+    border-radius: $bradius;
+    border: $border;
+    padding: $padding;
+}
+@mixin form-variant ($border-color, $color) {
+    border-color: $border-color;
+    color: $color;
+}
+
+.forms{
+    outline: none;
+    border: none;
+    width: 100%;
+        &__control{
+            @include form-size (100%, 6px, 1px solid $form-normal, 6px 12px);
+
+            &--has-success {
+                @include form-variant ($form-success, $form-success);
+            }
+            &--has-danger {
+                @include form-variant ($form-danger, $form-danger);
+            }
+            &--has-warning {
+                @include form-variant ($form-warning, $form-warning);
+            }
+        }
+        .label__control {
+            font-weight: 400;
+            &--success {
+                color: $form-success;
+            }
+            &--danger {
+                color: $form-danger;
+            }
+            &--warning {
+                color: $form-warning;
+            }
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/icon.ico">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-2.1.4.js"></script>
+</head>
+<body>
+        <div class="container">
+           <div class="buttons">
+                <h2>Buttons</h2>
+                   <div class="buttons">
+                       <div class="btn btn--default">default</div>
+                       <div class="btn btn--primary">primary</div>
+                       <div class="btn btn--success">success</div>
+                       <div class="btn btn--info">info</div>
+                       <div class="btn btn--warning">warning</div>
+                       <div class="btn btn--danger">danger</div>
+                   </div>
+           </div>
+           <div class="forms">
+               <div class="container">
+                   <h2>Forms</h2>
+                    <form class="forms">
+                        <div><input type="text" class="forms__control" placeholder="Text input"></div>
+                        <div><textarea class="forms__control" rows="4"></textarea></div>
+                        <div><input type="text" class="forms__control forms__control--pill"></div>
+                    </form>
+                <form class="forms">
+                    <p>
+                    <label for="inputSucces" class="label__control label__control--succes">Input with success</label>
+                    <input type="text" class="forms__control form__control--has-succes" id="inputSucces">
+                    </p>
+                    <p>
+                    <label for="inputDanger" class="label__control label__control--danger">Input with error</label>
+                    <input type="text" class="forms__control form__control--has-danger" id="inputDanger">
+                    </p>
+                    <p>
+                    <label for="inputDanger" class="label__control label__control--warning">Input with warning</label>
+                    <input type="text" class="forms__control form__control--has-warning" id="inputDanger">
+                    </p>
+                </form>
+                <form class="forms">
+                    <select class="forms__control">
+                        <option value="">Google Search</option>
+                        <option value="">BoingBoing</option>
+                        <option value="">BBC News</option>
+                    </select>
+                </form>
+               </div>
+           </div>
+        </div>
+	<script src="js/script.js"></script>
+</body>
+</html>
